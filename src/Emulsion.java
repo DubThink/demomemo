@@ -10,11 +10,20 @@ import java.util.List;
 public class Emulsion extends PApplet{
 
     public void settings(){
-        fullScreen(P2D,-2);
+        fullScreen(P3D,-2);
     }
+
     public void draw(){
         background(10,10,30);
+        noFill();
+        pushMatrix();
+        translate(width/2,height/2);
+        rotateY(frameCount/255f);
+        stroke(255);
+        box(200);
+        popMatrix();
     }
+
     public static void main(String... args){
         PApplet.main("Emulsion");
     }
